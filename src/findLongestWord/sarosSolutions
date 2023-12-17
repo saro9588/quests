@@ -1,0 +1,13 @@
+findLongestWord solution #2
+
+function longestWord (str){
+  let x = str.toLowerCase().split(' ')
+  let y = x.map((str2)=>str2.split(''))
+  let longestArray = y.reduce((prev, current) => {
+    return (prev.length > current.length) ? prev : current
+  }).join('')
+  return longestArray;
+} 
+
+console.log(longestWord('Hello People'))
+console.log(longestWord('I am an entry level developer!'))
